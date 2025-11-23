@@ -1,340 +1,557 @@
 
-<!DOCTYPE html>
+
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7-Eleven Gift Card Gift Card Promotion</title>
+    <title>Amazing Job Opportunities - Land Your Dream Job Today</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-        body {
-            font-family: 'Poppins', sans-serif;
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background: linear-gradient(to right, #f8f9fa, #e9ecef);
-            color: #343a40;
-            text-align: center;
         }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .amazing-text {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 3s ease infinite;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .job-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            border-radius: 20px;
             overflow: hidden;
         }
-
-        header {
-            background-color: #007bff;
-            color: #ffffff;
-            padding: 30px 20px;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            position: relative;
-            animation: fadeInDown 1s ease-out;
+        
+        .job-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.15);
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.8em;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-            font-weight: 400;
-        }
-
-        .gift-card-image {
-            width: 100%;
-            height: 250px;
-            background: url('https://via.placeholder.com/900x250/FF9900/FFFFFF?text=$750+Amazon+Gift+Card') center center / cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-            position: relative;
-            overflow: hidden;
-            animation: zoomIn 1s ease-out;
-            border-bottom: 5px solid #FF9900;
-        }
-
-        .gift-card-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .gift-card-image h2 {
-            color: #ffffff;
-            font-size: 3.5em;
-            font-weight: 700;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
-            z-index: 2;
-        }
-
-        .content {
-            padding: 40px;
-        }
-
-        .steps {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 30px;
-            margin-bottom: 40px;
-        }
-
-        .step-item {
-            flex: 1;
-            min-width: 250px;
-            margin: 15px;
-            padding: 25px;
-            background-color: #f1f7fe;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: fadeInUp 1s ease-out forwards;
-        }
-
-        .step-item:nth-child(1) { animation-delay: 0.2s; }
-        .step-item:nth-child(2) { animation-delay: 0.4s; }
-        .step-item:nth-child(3) { animation-delay: 0.6s; }
-
-        .step-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-        }
-
-        .step-item .icon {
-            font-size: 3em;
-            color: #007bff;
-            margin-bottom: 15px;
-        }
-
-        .step-item h3 {
-            font-size: 1.6em;
-            color: #007bff;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .step-item p {
-            font-size: 1em;
-            line-height: 1.6;
-            color: #6c757d;
-        }
-
-        .action-button-wrapper {
-            margin-top: 40px;
-            margin-bottom: 50px;
-            animation: bounceIn 1.5s ease-out;
-        }
-
-        .action-button {
-            display: inline-block;
-            background-color: #FFC107; /* Amazon orange-ish color */
-            color: #333;
-            padding: 18px 45px;
-            font-size: 1.8em;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        
+        .btn-amazing {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
             border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
             cursor: pointer;
-            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-
-        .action-button:hover {
-            background-color: #e0a800;
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 12px 25px rgba(255, 193, 7, 0.5);
+        
+        .btn-amazing:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
         }
-
-        footer {
-            background-color: #343a40;
-            color: #adb5bd;
-            padding: 25px 20px;
-            font-size: 0.9em;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            margin-top: 30px;
-            animation: fadeInUp 1s ease-out;
+        
+        .counter-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #4ecdc4;
+            text-shadow: 0 0 20px rgba(78, 205, 196, 0.5);
         }
-
-        footer p {
-            margin: 5px 0;
+        
+        .floating-element {
+            animation: float 3s ease-in-out infinite;
         }
-
-        footer a {
-            color: #007bff;
-            text-decoration: none;
-            transition: color 0.3s ease;
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
-
-        footer a:hover {
-            color: #6c757d;
+        
+        .review-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            header p {
-                font-size: 1em;
-            }
-            .gift-card-image h2 {
-                font-size: 2.5em;
-            }
-            .content {
-                padding: 20px;
-            }
-            .steps {
-                flex-direction: column;
-                align-items: center;
-            }
-            .step-item {
-                width: 90%;
-                margin: 15px 0;
-            }
-            .action-button {
-                font-size: 1.5em;
-                padding: 15px 30px;
-            }
+        
+        .review-card:hover {
+            transform: scale(1.05);
         }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-            .gift-card-image h2 {
-                font-size: 2em;
-            }
-            .action-button {
-                font-size: 1.3em;
-                padding: 12px 25px;
-            }
+        
+        .star-rating {
+            color: #ffd700;
+            font-size: 1.2rem;
         }
-
-        /* Keyframe Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        
+        .job-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
         }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)), url('https://www.investopedia.com/thmb/ZsouphAcVw5o8K72S9SeU1glP2M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1718773161-2f255e56e1a048a487c340265a6ad159.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
-
-        @keyframes zoomIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+        
+        .active-users {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
         }
-
-        @keyframes bounceIn {
-            0% {
-                transform: scale(0.1);
-                opacity: 0;
-            }
-            60% {
-                transform: scale(1.1);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(1);
-            }
+        
+        .live-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #4ecdc4;
+            border-radius: 50%;
+            animation: pulse 1s infinite;
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Unlock Your Potential!</h1>
-            <p>Don't miss out on this incredible opportunity.</p>
-        </header>
-
-        <div class="gift-card-image">
-            <h2>Win a 7-Eleven Gift Card!</h2>
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4">
+            <div class="floating-element">
+                <h1 class="text-6xl md:text-8xl font-bold mb-6">
+                    <span class="amazing-text">AMAZING</span>
+                </h1>
+                <h2 class="text-3xl md:text-5xl font-semibold mb-8">Job Opportunities Await!</h2>
+                <p class="text-xl md:text-2xl mb-12 text-gray-200">Land your dream job today with our exclusive opportunities</p>
+                
+                <!-- Active Users Counter -->
+                <div class="active-users max-w-md mx-auto mb-12">
+                    <div class="live-indicator"></div>
+                    <span class="text-lg font-semibold">Live Users Browsing Jobs</span>
+                    <div class="counter-number" id="userCounter">2,847</div>
+                    <p class="text-sm text-gray-300">Active job seekers online now</p>
+                </div>
+                
+                <button class="btn-amazing pulse-animation">
+                    <i class="fas fa-rocket mr-2"></i>
+                    Start Your Amazing Career Journey
+                </button>
+            </div>
         </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 floating-element">
+            <i class="fas fa-star text-yellow-400 text-4xl opacity-70"></i>
+        </div>
+        <div class="absolute bottom-20 right-10 floating-element" style="animation-delay: 1s;">
+            <i class="fas fa-briefcase text-blue-400 text-4xl opacity-70"></i>
+        </div>
+        <div class="absolute top-1/2 right-20 floating-element" style="animation-delay: 2s;">
+            <i class="fas fa-trophy text-yellow-500 text-4xl opacity-70"></i>
+        </div>
+    </section>
 
-        <div class="content">
-            <p style="font-size: 1.3em; margin-bottom: 30px; color: #495057; font-weight: 600;">
-                Your chance to get a massive Win a 7-Eleven Gift Card is here! Shop for anything you desire.
-            </p>
+    <!-- Job Offers Section -->
+    <section class="py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold text-white mb-4">
+                    <span class="amazing-text">AMAZING</span> Job Offers
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Discover incredible career opportunities across various industries with our exclusive job partnerships
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Cleaning Jobs-->
+                <div class="job-card p-8 text-white">
+                    <img src="https://i.postimg.cc/s2ygy9t4/OIP.webp" alt="Professional Job Search" class="job-image">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-briefcase text-3xl text-blue-400 mr-4"></i>
+                        <h3 class="text-2xl font-bold">Cleaning Jobs</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">Professional career opportunities across all industries. Find your perfect match with our comprehensive job database.</p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-green-400 font-semibold">
+                            <i class="fas fa-chart-line mr-2"></i>
+                            High Demand
+                        </span>
+                        <span class="text-yellow-400">
+                            <i class="fas fa-star mr-1"></i>
+                            4.9/5 Rating
+                        </span>
+                    </div>
+                    <a href="https://click.goaffs.com/click/kjhTN45s" target="_blank" class="btn-amazing w-full block text-center">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Apply Now
+                    </a>
+                </div>
 
-            <div class="steps">
-                <div class="step-item">
-                    <div class="icon">&#128269;</div> <!-- Magnifying glass icon -->
-                    <h3>Step 1: Discover</h3>
-                    <p>Click the button below to start your journey and discover exciting offers.</p>
+                <!--Work From Home jobs -->
+                <div class="job-card p-8 text-white">
+                    <img src="https://i.postimg.cc/02dxtQWm/R.jpg" alt="Amazon From Home" class="job-image">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-laptop-house text-3xl text-green-400 mr-4"></i>
+                        <h3 class="text-2xl font-bold">Work From Home jobs</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">Work from anywhere! Join the remote revolution with flexible opportunities that fit your lifestyle.</p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-green-400 font-semibold">
+                            <i class="fas fa-globe mr-2"></i>
+                            Global Opportunities
+                        </span>
+                        <span class="text-yellow-400">
+                            <i class="fas fa-star mr-1"></i>
+                            4.8/5 Rating
+                        </span>
+                    </div>
+                    <a href="https://click.goaffs.com/click/nfV0sfuH" class="btn-amazing w-full block text-center">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Apply Now
+                    </a>
                 </div>
-                <div class="step-item">
-                    <div class="icon">&#128172;</div> <!-- Speech bubble/document icon -->
-                    <h3>Step 2: Engage</h3>
-                    <p>Complete a few simple tasks or surveys tailored just for you.</p>
+
+                <!--  Driver jobs -->
+                <div class="job-card p-8 text-white">
+                    <img src="https://i.postimg.cc/G2Pyjmvp/OIP-(1).webp" alt="USPS Postal Service" class="job-image">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-mail-bulk text-3xl text-red-400 mr-4"></i>
+                        <h3 class="text-2xl font-bold">Driver jobs</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">Secure government positions with excellent benefits. Join the United States Postal Service team.</p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-green-400 font-semibold">
+                            <i class="fas fa-shield-alt mr-2"></i>
+                            Government Benefits
+                        </span>
+                        <span class="text-yellow-400">
+                            <i class="fas fa-star mr-1"></i>
+                            4.7/5 Rating
+                        </span>
+                    </div>
+                    <a href="https://click.goaffs.com/click/0dgXsOF5"_blank" class="btn-amazing w-full block text-center">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Apply Now
+                    </a>
                 </div>
-                <div class="step-item">
-                    <div class="icon">&#127873;</div> <!-- Gift icon -->
-                    <h3>Step 3: Redeem</h3>
-                    <p>Claim Your Chance to Win a 7-Eleven Gift Card once you've completed the requirements!</p>
+
+                <!--  USPS Jobs -->
+                <div class="job-card p-8 text-white">
+                    <img src="https://i.postimg.cc/52kj5FGr/attachment-Untitled-design-86.webp" alt="Dollar Tree Careers" class="job-image">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-store text-3xl text-yellow-400 mr-4"></i>
+                        <h3 class="text-2xl font-bold">  USPS Jobs</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">Retail opportunities with growth potential. Join America's leading discount retailer team.</p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-green-400 font-semibold">
+                            <i class="fas fa-trending-up mr-2"></i>
+                            Career Growth
+                        </span>
+                        <span class="text-yellow-400">
+                            <i class="fas fa-star mr-1"></i>
+                            4.6/5 Rating
+                        </span>
+                    </div>
+                    <a href="https://click.goaffs.com/click/k009360t"_blank" class="btn-amazing w-full block text-center">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Apply Now
+                    </a>
+                </div>
+
+                <!--   Amazon Flex jobs -->
+                <div class="job-card p-8 text-white">
+                    <img src="https://i.postimg.cc/B6prD278/maxresdefault.jpg" alt="Part Time Staffing" class="job-image">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-users text-3xl text-purple-400 mr-4"></i>
+                        <h3 class="text-2xl font-bold">  Amazon Flex jobs</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">Professional staffing solutions across industries. Connect with top employers through Kelly Services.</p>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-green-400 font-semibold">
+                            <i class="fas fa-handshake mr-2"></i>
+                            Trusted Partner
+                        </span>
+                        <span class="text-yellow-400">
+                            <i class="fas fa-star mr-1"></i>
+                            4.8/5 Rating
+                        </span>
+                    </div>
+                    <a href="https://click.goaffs.com/click/qx8icgOl"_blank" class="btn-amazing w-full block text-center">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Apply Now
+                    </a>
+                </div>
+
+                <!-- Featured Highlight -->
+                <div class="job-card p-8 text-white bg-gradient-to-r from-pink-500 to-violet-500">
+                    <div class="text-center">
+                        <i class="fas fa-crown text-5xl text-yellow-300 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4">Premium Job Access</h3>
+                        <p class="text-gray-100 mb-6">Get exclusive access to hidden job opportunities and priority placement services.</p>
+                        <div class="mb-6">
+                            <span class="text-yellow-300 font-semibold text-lg">
+                                <i class="fas fa-gem mr-2"></i>
+                                VIP Treatment
+                            </span>
+                        </div>
+                        <button class="btn-amazing w-full">
+                            <i class="fas fa-rocket mr-2"></i>
+                            Upgrade Now
+                        </button>
+                    </div>
                 </div>
             </div>
-
-            <div class="action-button-wrapper">
-                <a href="https://singingfiles.com/show.php?l=0&u=2355723&id=69081&tracking_id=Rakib" class="action-button" target="_blank">
-                    Claim Your Chance to Win a 7-Eleven Gift Card!
-                </a>
-            </div>
-
-            <p style="font-size: 0.9em; color: #868e96; margin-top: 40px;">
-                *Terms and conditions apply. Offer subject to change. Limited time promotion.
-            </p>
         </div>
+    </section>
 
-        <footer>
-            <p>&copy; 2023 UpLevel Rewards. All rights reserved.</p>
-            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-        </footer>
-    </div>
+    <!-- Live Application Features -->
+    <section class="py-20 bg-gradient-to-r from-blue-900 to-purple-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold text-white mb-4">
+                    <span class="amazing-text">LIVE</span> Application Features
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Apply instantly with our real-time application system
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="text-center text-white">
+                    <div class="bg-gradient-to-r from-green-400 to-blue-500 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-bolt text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Instant Application</h3>
+                    <p class="text-gray-300">Submit your application in under 60 seconds with our streamlined process.</p>
+                </div>
+                
+                <div class="text-center text-white">
+                    <div class="bg-gradient-to-r from-purple-400 to-pink-500 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Real-Time Tracking</h3>
+                    <p class="text-gray-300">Track your application status and get instant updates on your job search progress.</p>
+                </div>
+                
+                <div class="text-center text-white">
+                    <div class="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-star text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Priority Matching</h3>
+                    <p class="text-gray-300">Our AI matches you with the best opportunities based on your skills and preferences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Reviews -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
+                    <span class="amazing-text">TRUSTED</span> Reviews
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    See what our successful job seekers are saying about their amazing experiences
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="review-card">
+                    <div class="star-rating mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic">"Amazing platform! I found my dream remote job within 2 weeks. The application process was so smooth and the support team was incredibly helpful."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">SJ</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm">Software Developer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="star-rating mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic">"The USPS job listing was exactly what I was looking for. Great benefits and stable career. Thank you for making my job search so much easier!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">MR</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Michael Rodriguez</h4>
+                            <p class="text-gray-600 text-sm">Mail Carrier</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="star-rating mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic">"Kelly Services connected me with an amazing opportunity. The staffing process was professional and I got placed in my ideal role quickly."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">EL</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Emily Lee</h4>
+                            <p class="text-gray-600 text-sm">Project Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="mt-16 text-center">
+                <div class="grid md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-blue-600 mb-2">98%</div>
+                        <p class="text-gray-600">Success Rate</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-green-600 mb-2">50K+</div>
+                        <p class="text-gray-600">Jobs Placed</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-purple-600 mb-2">24/7</div>
+                        <p class="text-gray-600">Support</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-orange-600 mb-2">5★</div>
+                        <p class="text-gray-600">Average Rating</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h3 class="text-3xl font-bold mb-4">
+                    Start Your <span class="amazing-text">AMAZING</span> Career Today!
+                </h3>
+                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Join thousands of successful job seekers who found their dream careers through our platform.
+                </p>
+                <button class="btn-amazing pulse-animation">
+                    <i class="fas fa-rocket mr-2"></i>
+                    Get Started Now
+                </button>
+                
+                <div class="mt-12 pt-8 border-t border-gray-800">
+                    <p class="text-gray-500 text-sm">
+                        © 2024 Amazing Jobs. All rights reserved. | Connecting talent with opportunity since 2020
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Active User Counter Animation
+        function animateCounter() {
+            const counter = document.getElementById('userCounter');
+            const target = Math.floor(Math.random() * 1000) + 2000;
+            const duration = 2000;
+            const start = parseInt(counter.textContent.replace(/,/g, ''));
+            const increment = (target - start) / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                counter.textContent = Math.floor(current).toLocaleString();
+                
+                if (current >= target) {
+                    counter.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                }
+            }, 16);
+        }
+        
+        // Run counter animation every 10 seconds
+        setInterval(animateCounter, 10000);
+        
+        // Initial animation
+        setTimeout(animateCounter, 1000);
+        
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add click tracking for job applications
+        document.querySelectorAll('a[href*="cahdl3e2t.com"]').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('Job application clicked:', this.href);
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
